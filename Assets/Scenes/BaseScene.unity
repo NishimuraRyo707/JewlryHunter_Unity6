@@ -131,6 +131,8 @@ GameObject:
   - component: {fileID: 245531295}
   - component: {fileID: 245531297}
   - component: {fileID: 245531298}
+  - component: {fileID: 245531299}
+  - component: {fileID: 245531300}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -202,7 +204,7 @@ Transform:
   m_GameObject: {fileID: 245531294}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.07, y: 0.97, z: 0}
+  m_LocalPosition: {x: -2.01, y: -1.11, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -234,7 +236,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!70 &245531298
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -272,6 +274,45 @@ CapsuleCollider2D:
   m_Offset: {x: 0.04148954, y: 0.6313162}
   m_Size: {x: 0.56080306, y: 1.2881641}
   m_Direction: 0
+--- !u!114 &245531299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 245531294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d400f16743db746438ad8e846488ac7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3
+  jumpPower: 9
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+--- !u!95 &245531300
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 245531294}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8b24612e414ca0444b3e2b8af55687fa, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &271703190
 GameObject:
   m_ObjectHideFlags: 0
@@ -591,7 +632,7 @@ GameObject:
   - component: {fileID: 1935359321}
   - component: {fileID: 1935359320}
   - component: {fileID: 1935359322}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
