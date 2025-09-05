@@ -93,4 +93,16 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private void TriggerEnter2D(Collider2D collision)
+    {
+       if (collision.gameObject.CompareTag("Goal"))
+            {
+            GameManager gameState = "gameclear";
+            Debug.Log("ƒS[ƒ‹‚ÉÚG‚µ‚½");
+
+
+        }
+
+    }
+
 }
